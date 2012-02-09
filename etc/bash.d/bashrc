@@ -1,0 +1,20 @@
+#
+#  bashrc in the Ponka style will load submodules if exists.
+#
+PONKA_BASHRC_DIR=~/.bash.d
+PONKA_BASHRC_MODULE_PREFIX=""
+
+# Submodules to load
+PONKA_BASHRC_MODULES=(
+    var    
+    alias
+    functions
+    bash_completions
+    bind
+)
+
+# Loading.. 
+for module in ${PONKA_BASHRC_MODULES[@]} ; do
+    file_to_load="${PONKA_BASHRC_DIR}/${PONKA_BASHRC_MODULE_PREFIX}${module}"
+    [ -f "${file_to_load}" ] &&  .  "${file_to_load}" && echo "Loaded: ${file_to_load}" 
+done
