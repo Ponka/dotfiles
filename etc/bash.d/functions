@@ -1,0 +1,5 @@
+# -*-mode:shell-script;-*-
+tinyurl () 
+{ 
+    wget -O - "http://tinyurl.com/create.php?url=$*" 2> /dev/null | perl -n -e 'if(/^.*(http:\/\/tinyurl.com\/[^"<]+)".*$/){print $1 . "\n"; } '
+}

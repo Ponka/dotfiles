@@ -1,0 +1,2 @@
+bind -x '"\C-x\C-d":date '
+bind -x '"\C-x\C-f":free '

@@ -1,4 +1,4 @@
-#
+# -*-mode:shell-script;-*-
 #  bashrc in the Ponka style will load submodules if exists.
 #
 PONKA_BASHRC_DIR=~/.bash.d
@@ -6,11 +6,11 @@ PONKA_BASHRC_MODULE_PREFIX=""
 
 # Submodules to load
 PONKA_BASHRC_MODULES=(
-    var    
-    alias
+    vars
+    aliases
     functions
     bash_completions
-    bind
+    binds
 )
 
 # Loading.. 
